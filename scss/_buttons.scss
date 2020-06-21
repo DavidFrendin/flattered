@@ -1,0 +1,76 @@
+$button-color: rgba(0,0,0,.87);
+$action-color: #3282B8;
+$disabled-color: rgba(0,0,0,.26);
+$button-distinct-background: rgba(0,0,0,.87);
+$button-distinct-color: rgba(255,255,255,.87);
+
+button
+{
+    --ripple-background: #333333;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    padding: 0 16px;
+    line-height: 36px;
+    color: $button-color;
+    transition: background .2s cubic-bezier(0.35, 0, 0.25, 1);
+    outline: 0;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    min-width: 1em;
+    min-height: 1em;
+    
+    &[disabled="disabled"], &[disabled]
+    {
+        color: $disabled-color !important;
+        background: transparent !important;
+        cursor: default;
+    }
+
+    &:hover
+    {
+        background: rgba(0,0,0,.04);
+    }
+
+    &[action], &[action="action"]
+    {
+        --ripple-background: #3282B8;
+        color: $action-color;
+
+        &:hover
+        {
+            background: rgba($action-color, 0.04);
+        }
+    }
+
+    &[distinct], &[distinct="distinct"]
+    {
+        background: $button-distinct-background;
+        color: $button-distinct-color;
+        --ripple-background: #ffffff;
+
+        &:hover
+        {
+            background: lighten($button-distinct-background, 5%);
+        }
+
+        &[action], &[action="action"]
+        {
+            background: $action-color;
+
+            &:hover
+            {
+                background: lighten($action-color, 5%);
+            }
+        }
+
+        &[disabled], &[disabled="disabled"]
+        {
+            background: rgba(0,0,0,.04) !important;
+        }    
+    }
+
+}

@@ -1,0 +1,17 @@
+//Primary color should be bold
+$theme-primary: #0f4c75 !default;
+
+//Secondary color should be a desaturated version of the primary
+$theme-secondary: #64909b !default;
+
+//Is the theme dark?
+$theme-dark: false;
+
+
+
+$theme-background: if($theme-dark, #121212, #ffffff);
+
+
+$header-color: rgba(0,0,0,.87);
+$main-color: rgba(0,0,0,.60);
+$dialog-background: #ffffff;

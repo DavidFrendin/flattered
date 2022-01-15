@@ -72,7 +72,7 @@
     "postcss-cli": "^7.1.1",
     "rollup": "^2.15.0",
     "rollup-plugin-istanbul": "^2.0.1",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "sirv-cli": "^1.0.0",
     "stylelint": "^13.6.0",
     "stylelint-config-twbs-bootstrap": "^2.0.3",
